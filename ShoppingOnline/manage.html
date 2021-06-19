@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage shopping cellphone</title>
+  <!-- CSS bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+  <!-- CSS bootstrap -->
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="display-4 text-center text-danger font-weight-bold">Kho ứng dụng sản phẩm</h1>
+    <div >
+      <input class="m-2" id="id" type="text" placeholder="ID">
+      <p id="idError" class=" text-danger"></p>
+      <input class="m-2" id="name" type="text" placeholder="Name">
+      <p id="nameError" class=" text-danger"></p>
+      <input class="m-2" id="price" type="text" placeholder="Price">
+      <p id="priceError" class="r text-danger"></p>
+      <input class="m-2" id="screen" type="text" placeholder="Screen">
+      <p id="screenError" class="or text-danger"></p>
+      <input class="m-2" id="backCamera" type="text" placeholder="BackCamera">
+      <p id="BackCameraError" class="aError text-danger"></p>
+      <input class="m-2" id="frontCamera" type="text" placeholder="FrontCamera">
+      <p id="frontCameraError" class="raError text-danger"></p>
+      <input class="m-2" id="desc" type="text" placeholder="Desc">
+      <p id="descError" class=" text-danger"></p>
+      <input class="m-2" id="type" type="text" placeholder="Type">
+      <p id="typeError" class=" text-danger"></p>
+      <input class="m-2" id="img" type="text" placeholder="Image">
+      <p id="imgError" class="text-danger"></p>
+      <div class="w-50 my-4 mx-auto">
+        <button onclick="addProduct()" class="btn btn-danger">Thêm sản phẩm vào kệ hàng</button>
+        <button onclick="updateProduct()" class="btn btn-primary">Cập nhật thông tin sản phẩm</button>
+        <button id="btnReset" type="reset" style="display: none;"></button>
+      </div>
+    <div class="w-50 mx-auto my-4">
+      <div class="selectPhone pb-3 pl-3">
+        <select onchange="filterProduct()" id="typePhone">
+          <option>--Chọn dòng sản phẩm--</option>
+          <option value="allProduct">Tất cả sản phẩm</option>
+          <option value="iphone">Iphone</option>
+          <option value="samsung">Samsung</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div id="productList" class="productList d-flex flex-wrap"></div>
+  </div>
+
+
+
+  <!-- bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+  <!-- bootstrap -->
+
+  <!-- axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- axios -->
+
+  <script src="./models/Cellphone.js"></script>
+  <script src="./js/manage.js"></script>
+</body>
+
+</html>
